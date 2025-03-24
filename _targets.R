@@ -33,5 +33,9 @@ list(
   tar_target(
     name = dls,
     command = model(catch, survey)
+  ),
+  tar_target(
+    name = plot,
+    command = plot_summary(summary)
   )
 )
