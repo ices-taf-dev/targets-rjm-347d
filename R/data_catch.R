@@ -1,4 +1,4 @@
-get_catch <- function(file)
+data_catch <- function(file)
 {
   catch <- read.taf(file)
 }

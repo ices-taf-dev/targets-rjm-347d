@@ -8,12 +8,22 @@ tar_source()
 list(
   tar_target(
     name = catch_file,
-    command = "data/initial/catch.csv",
+    command = "data/catch.csv",
     format = "file",
-    description = "Annual catch prepared by WGEF in 2015, containing data from 2012-2014"
+    description = "Annual catch"
+  ),
+  tar_target(
+    name = survey_file,
+    command = "data/surveys_all.csv",
+    format = "file",
+    description = "Survey indices: IBTS1, IBTS3, Unknown, and UKBTS3"
   ),
   tar_target(
     name = catch,
-    command = get_catch(catch_file)
+    command = data_catch(catch_file)
+  ),
+  tar_target(
+    name = survey,
+    command = data_surveys(survey_file)
   )
 )
