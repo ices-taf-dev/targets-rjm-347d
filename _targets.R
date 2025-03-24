@@ -24,6 +24,6 @@ list(
   ),
   tar_target(
     name = survey,
-    command = data_surveys(survey_file)
+    command = data_survey(survey_file)
   )
 )

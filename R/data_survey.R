@@ -10,4 +10,6 @@ data_survey <- function(file)
 
   # Finalize table
   row.names(survey) <- NULL
+
+  survey
 }
