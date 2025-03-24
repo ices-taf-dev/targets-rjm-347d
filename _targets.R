@@ -1,6 +1,6 @@
 library(targets)
 tar_option_set(
-  packages = c("icesTAF")
+  packages = c("icesTAF", "icesAdvice")
 )
 
 tar_source()
@@ -29,5 +29,9 @@ list(
   tar_target(
     name = summary,
     command = data_summary(catch, survey)
+  ),
+  tar_target(
+    name = dls,
+    command = model(catch, survey)
   )
 )
