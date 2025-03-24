@@ -25,5 +25,9 @@ list(
   tar_target(
     name = survey,
     command = data_survey(survey_file)
+  ),
+  tar_target(
+    name = summary,
+    command = data_summary(catch, survey)
   )
 )
