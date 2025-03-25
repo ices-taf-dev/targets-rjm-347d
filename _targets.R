@@ -37,5 +37,9 @@ list(
   tar_target(
     name = plot,
     command = plot_summary(summary)
+  ),
+  tar_target(
+    name = summary_rnd,
+    command = round_summary(summary)
   )
 )

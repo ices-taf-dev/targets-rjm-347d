@@ -1,6 +1,6 @@
 data_catch <- function(file)
 {
-  catch <- read.taf(file)
+  read.taf(file)
 }
 
 data_summary <- function(catch, survey)
@@ -27,7 +27,7 @@ data_survey <- function(file)
 model <- function(catch, survey)
 {
   # Apply DLS method 3.2, comparing 5 years and 2 years
-  DLS3.2(mean(catch$Catch), survey$Index, len=c(5,2))
+  DLS3.2(mean(catch$Catch), survey$Index, len=c(5, 2))
 }
 
 plot_summary <- function(summary)
@@ -35,4 +35,9 @@ plot_summary <- function(summary)
   lattice::xyplot(Index~Year, summary, type="b", cex=1, lty=3, lwd=2, col=1,
                   ylim=lim(summary$Index), main="Survey",
                   grid=list(h=-1, v=-1, lty=3, lwd=2))
+}
+
+round_summary <- function(summary)
+{
+  rnd(summary, c("Catch", "Index"), c(0, 3))
 }
