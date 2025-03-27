@@ -6,7 +6,7 @@ A key distinction between the packages is that in `TAF` the user organizes their
 
 In TAF, the workflow structure is predetermined, as the main scripts will always be named `data.R`, `model.R`, `output.R`, and `report.R`. After running a TAF analysis, one can always expect to find the data and results in CSV format in the corresponding `data`, `output`, and `report` folders.
 
-In contrast, the `targets` package does not confine the user to adopt a predetermined workflow design, and tables containing data and results are generally accessed by the user as R objects rather than files.
+In contrast, the `targets` package does not confine the user to a predetermined workflow design, and tables containing data and results are generally accessed by the user as R objects rather than files.
 
 The purpose of the `taf-four-minutes` and `targets-rjm-347d` repositories is to facilitate comparing the functionality of the two packages.
 
