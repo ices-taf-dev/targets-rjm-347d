@@ -40,6 +40,7 @@ Object                  | Content
 `summary`               | catch and combined survey index (1993-2014)
 `summary_rnd`           | `summary` table rounded to 3 digits
 `dls`                   | catch advice (291 tonnes) and intermediate calculations
+`plot`                  | plot showing the combined survey index
 
 ## See also
 
